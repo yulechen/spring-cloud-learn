@@ -1,4 +1,11 @@
 访问规则：
+git_url/aaa/bbb/application-profile.yml
+
+label :对应代码分支
+profile：代表文件后缀
+application：代表文件名称
+application-profile.yml(master 分支)
+
 /{application}/{profile}[/{label}]
 /{application}-{profile}.yml
 /{label}/{application}-{profile}.yml

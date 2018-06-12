@@ -3,14 +3,16 @@ spring:
     name: configserver
   cloud:
     config:
-      #profile: dev
+     # profile: ${learn.env}
       server:
         git:
           #default-label: master
-          uri: https://github.com/xiongyongjie/panda
-          username: ###
-          password: ###
-          search-paths: config-repo/dev
-          basedir: D:\\config\
+          uri: https://github.com/yulechen/spring-cloud-learn
+          username: yulechen
+          password: cq_123456
+          #目录下面查找,切换环境,-Dlearn.env=prod
+          search-paths: git-config/${learn.env}
+          #从git clone 到本地
+          basedir: /Users/chenq/tmp/config-cache
 server:
   port: 8888
