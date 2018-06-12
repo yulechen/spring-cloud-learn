@@ -8,8 +8,8 @@ spring:
         git:
           #default-label: master
           uri: https://github.com/yulechen/spring-cloud-learn
-          username: yulechen
-          password: cq_123456
+          username: ***
+          password: ***
           #目录下面查找,切换环境,-Dlearn.env=prod
           search-paths: git-config/${learn.env}
           #从git clone 到本地
