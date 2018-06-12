@@ -11,3 +11,11 @@ application-profile.yml(master 分支)
 /{label}/{application}-{profile}.yml
 /{application}-{profile}.properties
 /{label}/{application}-{profile}.properties
+
+
+spring 环境profile 生效
+然后在applcation.properties文件中指定当前的环境：
+spring.profiles.active=test
+
+java -jar xx.jar --spring.profiles.active=prod
+java -jar xx.jar -Dspring.profiles.active=prod
