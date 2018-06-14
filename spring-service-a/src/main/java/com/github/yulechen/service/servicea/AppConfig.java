@@ -3,12 +3,12 @@ package com.github.yulechen.service.servicea;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class AppConfig {
-    //@Value("${name}")
+    @Value("${name}")
     private String name;
 
-   // @Value("${age}")
+    @Value("${age}")
     private int age;
 
     public String getName() {
