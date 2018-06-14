@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: discovery-learn
+
+server:
+  port: 7779
+
+# 服务注册中心
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://localhost:7777/eureka/

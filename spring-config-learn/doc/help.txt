@@ -21,7 +21,7 @@ java -jar xx.jar --spring.profiles.active=prod
 java -jar xx.jar -Dspring.profiles.active=prod
 
 配置优先级
-远程配置（zookeeper等） > 命令行参数配置 > application.yml> bootstrap.yml
+bootstrap.yml>application.yml
 
 
 # 配置中心服务

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service-a
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      profile: dev
+      label: master
+server:
+  port: 7778
+
+# 服务注册中心
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://localhost:7777/eureka/
