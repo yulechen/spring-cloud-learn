@@ -2,3 +2,29 @@
   localhost:7777
 
 # 服务注册中心
+
+# 注册中心高可用配置注意事项
+
+
+ 1、自身不注册
+   eureka.client.register-with-eureka:false
+   eureka.client.register-with-eureka: false
+
+ 2、自身注册
+    eureka.client.register-with-eureka:true
+    eureka.client.register-with-eureka:true
+
+ 3、配置文件读取顺序
+
+  1、不管哪个spring.profiles.active=哪个环境，都会读取application.yml(properties),boostrap.yml(properties)
+  2、属性值覆盖，激活的环境中的值，会覆盖默认环境中的值
+
+ 4、hosts 配置
+    192.168.1.117 node1 node2 node3
+
+ 5、url 使用ip 配置
+  eureka:
+    instance:
+      preferIpAddress: true
+
+ 6、注册中心自我保护模式。

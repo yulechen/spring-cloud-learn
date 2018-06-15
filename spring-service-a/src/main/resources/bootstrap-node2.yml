@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: service-a
+  cloud:
+    config:
+      uri: http://localhost:8001/
+      profile: dev
+      label: master
+server:
+  port: 6002
+
+# 服务注册中心
+eureka:
+  client:
+    serviceUrl:
+       # 多个注册中心
+       defaultZone: http://node1:7001/eureka/,http://node2:7002/eureka/,http://node3:7003/eureka/

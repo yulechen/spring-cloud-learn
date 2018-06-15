@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eurakeserver
+server:
+      port: 7001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://node2:7002/eureka/,http://node3:7003/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: node1
+    preferIpAddress: false

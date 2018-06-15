@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+     # profile: ${learn.env}
+      server:
+        git:
+          #default-label: master
+          uri: https://github.com/yulechen/spring-cloud-learn
+          username: yulechen
+          password: cq_123456
+          #目录下面查找,切换环境,-Dlearn.env=prod
+          search-paths: git-config/dev
+          #从git clone 到本地
+          basedir: /Users/chenq/tmp/config-cache-node1
+server:
+  port: 8001

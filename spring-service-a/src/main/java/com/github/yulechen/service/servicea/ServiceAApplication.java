@@ -27,4 +27,12 @@ public class ServiceAApplication {
 	public AppConfig getCfg(){
 		return  this.config;
 	}
+
+	@ResponseBody
+	@RequestMapping("/id")
+	public String getActive(){
+		String property = System.getProperty("spring.profiles.active");
+		System.out.println(property);
+		return property ;
+	}
 }

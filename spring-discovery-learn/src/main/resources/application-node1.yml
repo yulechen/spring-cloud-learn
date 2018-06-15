@@ -3,10 +3,10 @@ spring:
     name: discovery-learn
 
 server:
-  port: 6000
+  port: 5001
 
 # 服务注册中心
 eureka:
   client:
     serviceUrl:
-       defaultZone: http://localhost:7777/eureka/
+       defaultZone: http://node1:7001/eureka/,http://node2:7002/eureka/,http://node3:7003/eureka/

@@ -1,0 +1,28 @@
+# 服务消费方
+
+# 调用
+
+1、使用RestTemplate。
+
+
+2、使用负载方式调用Ribbon，Ribbon会从Eureka注册中心去获取服务端列表。
+        <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-ribbon</artifactId>
+		</dependency>
+    - 负载策略 IRule
+      - AbstractLoadBalancerRule
+         - RandomRule
+         - RoundRob
+         - RetryRule
+         - WeightedResponseTimeRule
+         - ClientConfigEnabledRoundRobinRule
+
+3、使用Feign 调用,此方式可以解决 负载 ，单点故障，限流熔断，执行服务降级。
+        1 maven
+        <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		2、开启 @EnableFeignClients
