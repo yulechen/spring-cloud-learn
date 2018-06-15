@@ -28,3 +28,4 @@
       preferIpAddress: true
 
  6、注册中心自我保护模式。
+ 7、重试机制
